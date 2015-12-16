@@ -131,8 +131,19 @@ install_dotfiles () {
   done
 }
 
+install_qtcreatorfiles () {
+
+  local overwrite_all=false backup_all=false skip_all=false
+  local dst="$HOME/.config/Nokia/qtcreator/generic-highlighter/"
+
+  mkdir -p $dst 
+  link_file "$DOTFILES_ROOT/qtcreator/xml.xml" "${dst}xml.xml"
+  success 'installed qtcreator xml.xml'
+}
+
 setup_gitconfig
 install_dotfiles
+install_qtcreatorfiles
 
 echo ''
 echo '  All installed!'
