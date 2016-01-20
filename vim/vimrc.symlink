@@ -65,4 +65,4 @@ au BufNewFile,BufRead *.launch *.awp *.urdf *.xacro setfiletype xml   "Recognize
 " autocmd Syntax c,cpp,vim,xml,html,xhtml setlocal foldmethod=syntax
 " autocmd Syntax c,cpp,vim,xml,html,xhtml,perl normal zR
 
-execute pathogen#infect()
+" execute pathogen#infect()
