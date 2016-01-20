@@ -61,7 +61,7 @@ set tabstop=2     " Tab key indents two spaces at a time
 set expandtab     " Use spaces when the <Tab> key is pressed
 set cindent       " Turn on autimatic C-code indentatiion
 
-au BufNewFile,BufRead *.launch *.awp *.urdf *.xacro setfiletype xml   "Recognize .launch files as xml for the syntax
+au BufRead,BufNewFile *.launch,*.awp,*.urdf,*.xacro set filetype=xml   "Recognize .launch files as xml for the syntax
 " autocmd Syntax c,cpp,vim,xml,html,xhtml setlocal foldmethod=syntax
 " autocmd Syntax c,cpp,vim,xml,html,xhtml,perl normal zR
 
