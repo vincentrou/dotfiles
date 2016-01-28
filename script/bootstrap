@@ -134,11 +134,19 @@ install_dotfiles () {
 install_qtcreatorfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
-  local dst="$HOME/.config/QtProject/qtcreator/generic-highlighter/"
-
+  local qtproject="$HOME/.config/QtProject/"
+  local dst="${qtproject}/qtcreator/generic-highlighter/"
   mkdir -p $dst 
   link_file "$DOTFILES_ROOT/qtcreator/xml.xml" "${dst}xml.xml"
   success 'installed qtcreator xml.xml'
+
+  local dst2="${qtproject}/qtcreator/codestyles/Cpp/"
+  mkdir -p $dst2 
+  link_file "$DOTFILES_ROOT/qtcreator/codingstyle.xml" "${dst2}codingstyle.xml"
+  sed -i 's/CurrentPreferences=.*/CurrentPreferences=@ByteArray(codingstyle)/' "${qtproject}QtCreator.ini"
+  success 'installed qtcreator codingstyle.xml'
+
+
 }
 
 setup_gitconfig
