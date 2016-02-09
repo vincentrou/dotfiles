@@ -27,6 +27,28 @@ fail () {
   exit
 }
 
+setup_renater_certificate () {
+  renater_certificate=false
+  user "Install renater certificate for irstea forge"
+  read -n 1 action
+  case "$action" in
+    y )
+      renater_certificate=true
+
+  if [ "$renater_certificate" == "true" ]
+  then
+    sudo wget -O /usr/local/share/ca-certificates/TCS-CA-CHAIN-SHA1.crt 'https://services.renater.fr/_media/tcs/tcschain.crt?cache=nocache'
+    sudo wget -O /usr/local/share/ca-certificates/TCS-CA-CHAIN-SHA2.crt 'https://services.renater.fr/_media/tcs/serveur/cachain.txt?cache=nocache'
+    if [ -f /usr/local/share/ca-certificates/TCS-CA-CHAIN-SHA1.crt ] && [ -f /usr/local/share/ca-certificates/TCS-CA-CHAIN-SHA2.crt ]
+    then
+      sudo update-ca-certificates
+      success "Update ca certificates should be good"
+    else
+      fail "Cannot access to https://services.renater.fr"
+    fi
+  fi
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
