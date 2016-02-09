@@ -29,11 +29,15 @@ fail () {
 
 setup_renater_certificate () {
   renater_certificate=false
-  user "Install renater certificate for irstea forge"
+  user "Install renater certificate for irstea forge \n\
+        [y]es, [n]o"
   read -n 1 action
   case "$action" in
     y )
-      renater_certificate=true
+      renater_certificate=true;;
+    * )
+      info "Renater certificate not installed";;
+  esac
 
   if [ "$renater_certificate" == "true" ]
   then
@@ -174,6 +178,8 @@ install_qtcreatorfiles () {
 setup_gitconfig
 install_dotfiles
 install_qtcreatorfiles
+setup_renater_certificate
+
 
 echo ''
 echo '  All installed!'
