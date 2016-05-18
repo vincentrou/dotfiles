@@ -177,8 +177,8 @@ install_qtcreatorfiles () {
 
 setup_gitconfig
 install_dotfiles
-install_qtcreatorfiles
 setup_renater_certificate
+install_qtcreatorfiles
 
 
 echo ''
