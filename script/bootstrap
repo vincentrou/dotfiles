@@ -169,7 +169,9 @@ install_qtcreatorfiles () {
   local dst2="${qtproject}/qtcreator/codestyles/Cpp/"
   mkdir -p $dst2 
   link_file "$DOTFILES_ROOT/qtcreator/codingstyle.xml" "${dst2}codingstyle.xml"
-  sed -i 's/CurrentPreferences=.*/CurrentPreferences=@ByteArray(codingstyle)/' "${qtproject}QtCreator.ini"
+  #sed -i 's/CurrentPreferences=.*/CurrentPreferences=@ByteArray(codingstyle)/' "${qtproject}QtCreator.ini"
+  SCRIPTPATH=$( cd "$(dirname "$0")" ; pwd -P )
+  python "$SCRIPTPATH/edit_ini.py"
   success 'installed qtcreator codingstyle.xml'
 
 
