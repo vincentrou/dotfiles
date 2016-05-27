@@ -174,6 +174,9 @@ install_qtcreatorfiles () {
   python "$SCRIPTPATH/edit_ini.py"
   success 'installed qtcreator codingstyle.xml'
 
+  local dst_launcher="$HOME/.local/share/applications/"
+  mkdir -p dst_launcher 
+  link_file "$DOTFILES_ROOT/qtcreator/launcher/qtcreator.desktop" "${dst_launcher}qtcreator.desktop"
 
 }
 

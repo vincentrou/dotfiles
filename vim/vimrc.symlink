@@ -66,3 +66,7 @@ au BufRead,BufNewFile *.launch,*.awp,*.urdf,*.xacro set filetype=xml   "Recogniz
 " autocmd Syntax c,cpp,vim,xml,html,xhtml,perl normal zR
 
 " execute pathogen#infect()
+
+" Disable logipat which create a command :ELP and
+" avoid the use of :E for :Explore
+let g:loaded_logipat = 1
