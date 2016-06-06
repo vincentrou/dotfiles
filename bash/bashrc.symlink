@@ -17,7 +17,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=8000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -115,6 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+#SOURCE ONLY ONE SETUP.BASH AT A TIME !
 #source /opt/ros/indigo/setup.bash
 #source ~/catkin_ws/devel/setup.bash
 #avoid rviz to crash
