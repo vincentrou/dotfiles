@@ -161,10 +161,12 @@ install_qtcreatorfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
   local qtproject="$HOME/.config/QtProject/"
-  local dst="${qtproject}/qtcreator/generic-highlighter/"
+  local highlighter_dir="/qtcreator/generic-highlighter/"
+  local dst="${qtproject}${highlighter_dir}"
   mkdir -p $dst 
-  link_file "$DOTFILES_ROOT/qtcreator/xml.xml" "${dst}xml.xml"
-  success 'installed qtcreator xml.xml'
+  link_file "$DOTFILES_ROOT${highlighter_dir}xml.xml" "${dst}xml.xml"
+  link_file "$DOTFILES_ROOT${highlighter_dir}yaml.xml" "${dst}yaml.xml"
+  success 'installed qtcreator highlighter'
 
   local dst2="${qtproject}/qtcreator/codestyles/Cpp/"
   mkdir -p $dst2 
