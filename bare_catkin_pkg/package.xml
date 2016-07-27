@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>follow_lines</name>
+  <version>0.0.0</version>
+  <description>The follow_lines package</description>
+
+  <maintainer email="vincent.rousseau@irstea.fr">Vincent Rousseau</maintainer>
+
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+  <!-- <url type="website">http://wiki.ros.org/follow_lines</url> -->
+
+  <author email="vincent.rousseau@irstea.fr">Vincent Rousseau</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>geometry_msgs</build_depend>
+  <depend>roscpp</build_depend>
+  <!-- Use test_depend for packages you need only for testing: -->
+  <!--   <test_depend>gtest</test_depend> -->
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
