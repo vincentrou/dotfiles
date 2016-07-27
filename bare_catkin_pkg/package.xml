@@ -14,8 +14,7 @@
   <author email="vincent.rousseau@irstea.fr">Vincent Rousseau</author>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>geometry_msgs</build_depend>
-  <depend>roscpp</build_depend>
+  <depend>roscpp</depend>
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
 
