@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>follow_lines</name>
+  <name></name>
   <version>0.0.0</version>
-  <description>The follow_lines package</description>
+  <description>The  package</description>
 
   <maintainer email="vincent.rousseau@irstea.fr">Vincent Rousseau</maintainer>
 

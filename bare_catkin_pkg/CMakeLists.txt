@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(follow_lines)
+project()
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
   roscpp
 )
 ## Uncomment this if the package has a setup.py. This macro ensures
