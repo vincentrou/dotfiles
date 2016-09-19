@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
-project()
+project(pkg_name)
+
+set(${PROJECT_NAME}_CATKIN_DEPS roscpp)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-)
+find_package(catkin REQUIRED COMPONENTS ${${PROJECT_NAME}_CATKIN_DEPS})
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
@@ -43,8 +43,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES follow_lines
-#  CATKIN_DEPENDS geometry_msgs roscpp
+#  LIBRARIES pkg_name
+  CATKIN_DEPENDS ${${PROJECT_NAME}_CATKIN_DEPS}
 #  DEPENDS system_lib
 )
 
@@ -57,15 +57,15 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(follow_lines
-#   src/${PROJECT_NAME}/follow_lines.cpp
+# add_library(pkg_name
+#   src/${PROJECT_NAME}/pkg_name.cpp
 # )
 
 ## Declare a C++ executable
-# add_executable(follow_lines_node src/follow_lines_node.cpp)
+# add_executable(pkg_name_node src/pkg_name_node.cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(follow_lines_node
+# target_link_libraries(pkg_name_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -84,7 +84,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS follow_lines follow_lines_node
+# install(TARGETS pkg_name pkg_name_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -109,7 +109,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_follow_lines.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_pkg_name.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
