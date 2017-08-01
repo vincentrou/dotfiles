@@ -23,7 +23,6 @@ build/
 
 #qtcreator
 *.user*
-*.config
 *.creator
 *.files
 *.includes
