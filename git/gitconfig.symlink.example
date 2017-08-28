@@ -23,7 +23,7 @@
 [mergetool]
         keepBackup = false
 [push]
-        default = nothing
+        default = simple
 # pull will do a rebase instead of a merge
 [pull]
         rebase = true
