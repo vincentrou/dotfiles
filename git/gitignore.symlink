@@ -50,3 +50,6 @@ debug/
 *.log
 *.out
 *.toc
+
+#nodejs
+node_modules/
