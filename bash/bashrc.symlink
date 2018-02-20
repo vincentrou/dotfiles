@@ -124,5 +124,9 @@ fi
 #avoid rviz to crash
 #export LIBGL_ALWAYS_SOFTWARE=1
 
+#SOURCE ROS2
+#source /opt/ros/ardent/setup.bash
+#source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
+
 #export PKG_CONFIG_PATH=/usr/lib/pkgconfig/:${PKG_CONFIG_PATH}
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
