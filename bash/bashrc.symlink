@@ -118,6 +118,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#ROS 1
 #SOURCE ONLY ONE SETUP.BASH AT A TIME !
 #source /opt/ros/kinetic/setup.bash
 #source ~/catkin_ws/devel/setup.bash
@@ -127,6 +129,7 @@ fi
 #SOURCE ROS2
 #source /opt/ros/ardent/setup.bash
 #source /opt/ros/ardent/share/ros2cli/environment/ros2-argcomplete.bash
+#register-python-argcomplete colcon
 
 #export PKG_CONFIG_PATH=/usr/lib/pkgconfig/:${PKG_CONFIG_PATH}
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
